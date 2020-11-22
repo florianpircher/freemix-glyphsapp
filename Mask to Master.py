@@ -28,7 +28,7 @@ def counterparts( selection, background ):
 		glyph = foregroundLayer.parent
 		glyph_copy = glyph.copy()
 		glyph_copy.parent = glyph.parent
-		background = glyph_copy.layerForKey_( foregroundLayer.layerId ).background
+		background = glyph_copy.layers[foregroundLayer.layerId].background
 		background.decomposeComponents()
 	best_point_range = []
 	best_deviation = sys.maxsize
